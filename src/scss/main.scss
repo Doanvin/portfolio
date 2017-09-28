@@ -3,19 +3,25 @@
 
 
 
-
 // 2. Set your own initial variables
+
 // Update blue
-// $blue: #72d0eb;
+// $blue: #46aef7;
+// $blue-invert: #fff;
 // Add pink and its invert
-$pink: #ffb3b3;
-$pink-invert: #fff;
+// $pink: #ffb3b3;
+// $pink-invert: #fff;
 
 
 // 3. Set the derived variables
 // Use the new pink as the primary color
-$primary: $pink;
-$primary-invert: $pink-invert;
+// $primary: $orange;
+// $primary-invert: $pink-invert;
 
 // 4. Import the rest of Bulma
-@import "./../../node_modules/bulma/bulma";
+@import "bulma";
+
+
+// 5. Import custom partials
+@import "./tiles";
+@import "./helpers";

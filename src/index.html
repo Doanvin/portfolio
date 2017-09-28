@@ -5,55 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Portfolio - DH</title>
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/main.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <section class="hero is-success is-fullheight">
+  <section class="hero hero-bg is-primary is-fullheight">
     <!-- Hero header: will stick at the top -->
     <div class="hero-head">
-      <header class="nav">
+      <nav class="navbar is-light" role="navigation" aria-label="main navigation">
         <div class="container">
-          <div class="nav-left">
-            <a class="nav-item">
-              <img src="images/bulma-type-white.png" alt="Logo">
-            </a>
+        <div class="navbar-brand">
+          <a class="navbar-item" href="http://bulma.io">
+            <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+          </a>
+
+          <button class="button navbar-burger" data-target="navMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <div class="navbar-menu" id="navMenu">
+          <div class="navbar-start">
+            <!-- navbar items -->
           </div>
-          <span class="nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-          <div class="nav-right nav-menu">
-            <a class="nav-item is-active">
+
+          <div class="navbar-end">
+            <a class="navbar-item is-active">
               Home
             </a>
-            <a class="nav-item">
-              Examples
+            <a class="navbar-item" href="#about">
+              About
             </a>
-            <a class="nav-item">
-              Documentation
+            <a class="navbar-item" href="#projects">
+              Projects
             </a>
-            <span class="nav-item">
-              <a class="button is-success is-inverted">
+            <a class="navbar-item" href="#contact">
+              Contact
+            </a>
+            <div class="navbar-item">
+              <a class="button is-primary" href="https://github.com/Doanvin" target="_blank">
                 <span class="icon">
                   <i class="fa fa-github"></i>
                 </span>
-                <span>Download</span>
+                <span>Github</span>
               </a>
-            </span>
+            </div>
           </div>
         </div>
-      </header>
+        </div>
+      </nav>
     </div>
 
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
       <div class="container has-text-centered">
-        <h1 class="title">
+        <h1 class="title is-size-3-mobile is-size-2-tablet is-size-1-desktop">
           Donavin Hannon
         </h1>
-        <h2 class="subtitle">
+        <h2 class="subtitle is-size-3-mobile is-size-2-tablet is-size-1-desktop">
           Web Developer
         </h2>
       </div>
@@ -61,19 +71,94 @@
 
     <!-- Hero footer: will stick at the bottom -->
     <div class="hero-foot">
-      <nav class="tabs is-boxed is-fullwidth">
-        <div class="container">
-          <ul>
-            <li class="is-active"><a>Overview</a></li>
-            <li><a>Modifiers</a></li>
-            <li><a>Grid</a></li>
-            <li><a>Elements</a></li>
-            <li><a>Components</a></li>
-            <li><a>Layout</a></li>
-          </ul>
-        </div>
-      </nav>
+      <div class="container has-text-centered">
+        <a class="angle-down" href="#about">
+          <i class="fa fa-angle-down fa-4x" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
   </section>
+
+  <section class="section container" id="projects">
+    <h1 class="title is-size-2 has-text-centered">Projects</h1>
+    <h2 class="subtitle has-text-centered">
+      Here are a few recent projects that I have worked on.
+    </h2>
+    <div class="tile is-ancestor">
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-primary">
+          <p class="title is-size-4-touch">Calaska Culture</p>
+          <p class="subtitle is-size-5-touch">Semantic, Responsive</p>
+          <figure class="image is-4by3">
+            <img src="http://bulma.io/images/placeholders/640x480.png">
+          </figure>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+          <p class="title is-size-4-touch">10 Day Weather</p>
+          <p class="subtitle is-size-5-touch">Api, Bootstrap</p>
+          <figure class="image is-4by3">
+            <img src="http://bulma.io/images/placeholders/640x480.png">
+          </figure>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-danger">
+          <p class="title is-size-4-touch">First Angular App</p>
+          <p class="subtitle is-size-5-touch">Angular</p>
+          <figure class="image is-4by3">
+            <img src="http://bulma.io/images/placeholders/640x480.png">
+          </figure>
+          <div class="content">
+            This is the content.
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          &copy; Copyright 2017 | Donavin Hannon
+        </p>
+        <p>
+          <a class="icon" href="https://github.com/Doanvin">
+            <i class="fa fa-github"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+
+// Get all "navbar-burger" elements
+var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Check if there are any navbar burgers
+if ($navbarBurgers.length > 0) {
+
+  // Add a click event on each of them
+  $navbarBurgers.forEach(function ($el) {
+    $el.addEventListener('click', function () {
+
+      // Get the target from the "data-target" attribute
+      var target = $el.dataset.target;
+      var $target = document.getElementById(target);
+
+      // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+      $el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+}
+
+});
+  </script>
 </body>
 </html>
