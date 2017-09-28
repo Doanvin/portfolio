@@ -94,10 +94,10 @@
     <div class="container">
       <h2 class="title is-size-2 has-text-centered">Projects</h2>
       <p class="subtitle has-text-centered">
-        Here are a few recent projects that I have worked on.
+        Here are a few recent projects that I've worked on.
       </p>
 
-      <!-- Beginning of project columns -->
+      <!-- Begin project columns -->
       <!-- Row: 1  Col: 1 -->
       <div class="columns">
         <div class="column is-4">
@@ -185,7 +185,7 @@
               <img src="http://bulma.io/images/placeholders/640x480.png">
             </figure>
             <div class="content">
-              <a class="button button--start is-light" title="Your already here!" href="https://github.io/Doanvin/portfolio" target="_blank" disabled>
+              <a class="button button--start is-light" title="You're already here!" href="https://github.io/Doanvin/portfolio" target="_blank" disabled>
                 <span class="icon">
                   <i class="fa fa-link"></i>
                 </span>
@@ -202,8 +202,8 @@
           </article>
         </div>
       </div>
+      <!-- End project columns -->
     </div>
-
   </section>
 
   <section class="section" id="contact">
@@ -213,48 +213,41 @@
         Use the form below to get in contact with me.
       </p>
       <div class="columns">
-      <form class="column is-8 is-offset-2" method="POST" action="https://formspree.io/donavinhannon@gmail.com">
+      <form class="column is-8 is-offset-2" name="contact" onsubmit="return validateForm()" method="POST" action="https://formspree.io/donavinhannon@gmail.com">
         <div class="field">
           <label class="label">Name</label>
           <div class="control">
-            <input class="input" type="text" name="name" placeholder="Your name">
+            <input class="input" type="text" name="name" placeholder="Your name" required>
           </div>
         </div>
 
         <div class="field">
           <label class="label">Email</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-danger" type="email" name="_replyto" placeholder="Your email" value="">
+            <input class="input" type="email" name="_replyto" placeholder="Your email" value="" required>
             <span class="icon is-small is-left">
               <i class="fa fa-envelope"></i>
             </span>
-            <span class="icon is-small is-right">
-              <i class="fa fa-warning"></i>
-            </span>
           </div>
-          <p class="help is-danger">This email is invalid</p>
         </div>
 
         <div class="field">
           <label class="label">Subject</label>
           <div class="control">
-            <input class="input" type="text" name="subject" placeholder="Subject">
+            <input class="input" type="text" name="subject" placeholder="Subject" required>
           </div>
         </div>
 
         <div class="field">
           <label class="label">Message</label>
           <div class="control">
-            <textarea class="textarea" name="message" placeholder="Your message"></textarea>
+            <textarea class="textarea" name="message" placeholder="Your message" required></textarea>
           </div>
         </div>
 
         <div class="field is-grouped">
           <div class="control">
             <button class="button is-primary" type="submit" value="Send">Submit</button>
-          </div>
-          <div class="control">
-            <button class="button is-link">Cancel</button>
           </div>
         </div>
       </form>
@@ -298,11 +291,20 @@
       $el.classList.toggle('is-active');
       $target.classList.toggle('is-active');
 
+      });
     });
-  });
-}
+  }
 
-});
+  });
+
+
+  function validateForm() {
+    var email = document.forms['contact']['_replyto'].value;
+    if (/(\w|\.|-)+@(\w|-){2,22}\.((\w{2,5}\.\w{2,5})|(\w{2,12}))/.test(email) != true) {
+        alert('The email address entered is not valid.  Please enter a valid email address.');
+        return false;
+    }
+  }
   </script>
 </body>
 </html>
