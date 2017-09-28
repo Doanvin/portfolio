@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,10 @@
   <link rel="stylesheet" href="/css/main.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
   <section class="hero hero-bg is-primary is-fullheight">
-    <!-- Hero header: will stick at the top -->
+    <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <nav class="navbar is-light" role="navigation" aria-label="main navigation">
         <div class="container">
@@ -63,9 +65,9 @@
         <h1 class="title is-size-3-mobile is-size-2-tablet is-size-1-desktop">
           Donavin Hannon
         </h1>
-        <h2 class="subtitle is-size-3-mobile is-size-2-tablet is-size-1-desktop">
+        <p class="subtitle is-size-3-mobile is-size-2-tablet is-size-1-desktop">
           Web Developer
-        </h2>
+        </p>
       </div>
     </div>
 
@@ -79,41 +81,183 @@
     </div>
   </section>
 
-  <section class="section container" id="projects">
-    <h1 class="title is-size-2 has-text-centered">Projects</h1>
-    <h2 class="subtitle has-text-centered">
-      Here are a few recent projects that I have worked on.
-    </h2>
-    <div class="tile is-ancestor">
-      <div class="tile is-parent">
-        <article class="tile is-child notification is-primary">
-          <p class="title is-size-4-touch">Calaska Culture</p>
-          <p class="subtitle is-size-5-touch">Semantic, Responsive</p>
-          <figure class="image is-4by3">
-            <img src="http://bulma.io/images/placeholders/640x480.png">
-          </figure>
-        </article>
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="title is-size-2 has-text-centered">About</h2>
+      <p class="subtitle has-text-centered">
+        About me.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="title is-size-2 has-text-centered">Projects</h2>
+      <p class="subtitle has-text-centered">
+        Here are a few recent projects that I have worked on.
+      </p>
+
+      <!-- Beginning of project columns -->
+      <!-- Row: 1  Col: 1 -->
+      <div class="columns">
+        <div class="column is-4">
+          <article class="notification is-primary">
+            <h3 class="title is-size-4-touch">Calaska Culture</h3>
+            <p class="subtitle is-size-5-touch">Semantic, Responsive</p>
+            <figure class="image is-4by3">
+              <img src="http://bulma.io/images/placeholders/640x480.png">
+            </figure>
+            <div class="content">
+              <a class="button button--start is-light" href="https://www.calaska.org/" target="_blank">
+                <span class="icon">
+                  <i class="fa fa-link"></i>
+                </span>
+                <span class="is-size-7-touch">Live</span>
+              </a>
+              <a class="button button--end is-dark" href="https://github.com/Doanvin/ak-native-culture" target="_blank">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+                <span class="is-size-7-touch">Github</span>
+              </a>
+              <p>This is content text about the project.</p>
+            </div>
+          </article>
+        </div>
+        <!-- Row: 1  Col: 2 -->
+        <div class="column is-4">
+          <article class="notification is-info">
+            <h3 class="title is-size-4-touch">10 Day Weather</h3>
+            <p class="subtitle is-size-5-touch">Api's, Bootstrap 3</p>
+            <figure class="image is-4by3">
+              <img src="http://bulma.io/images/placeholders/640x480.png">
+            </figure>
+            <div class="content">
+              <a class="button button--start is-light" href="https://github.io/Doanvin/weather-by-burr" target="_blank">
+                <span class="icon">
+                  <i class="fa fa-link"></i>
+                </span>
+                <span class="is-size-7-touch">Live</span>
+              </a>
+              <a class="button button--end is-dark" href="https://github.com/Doanvin/weather-by-burr" target="_blank">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+                <span class="is-size-7-touch">Github</span>
+              </a>
+              <p>This is content text about the project.</p>
+            </div>
+          </article>
+        </div>
+        <!-- Row: 1  Col: 3 -->
+        <div class="column is-4">
+          <article class="notification is-danger">
+            <h3 class="title is-size-4-touch">Recipe App</h3>
+            <p class="subtitle is-size-5-touch">Angular</p>
+            <figure class="image is-4by3">
+              <img src="http://bulma.io/images/placeholders/640x480.png">
+            </figure>
+            <div class="content">
+              <a class="button button--start is-light" href="https://github.io/Doanvin/first-angular-app" target="_blank">
+                <span class="icon">
+                  <i class="fa fa-link"></i>
+                </span>
+                <span class="is-size-7-touch">Live</span>
+              </a>
+              <a class="button button--end is-dark" href="https://github.com/Doanvin/first-angular-app" target="_blank">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+                <span class="is-size-7-touch">Github</span>
+              </a>
+              <p>This is content text about the project.</p>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="tile is-parent">
-        <article class="tile is-child notification is-info">
-          <p class="title is-size-4-touch">10 Day Weather</p>
-          <p class="subtitle is-size-5-touch">Api, Bootstrap</p>
-          <figure class="image is-4by3">
-            <img src="http://bulma.io/images/placeholders/640x480.png">
-          </figure>
-        </article>
+      <!-- Row: 2  Col: 1 -->
+      <div class="columns">
+        <div class="column is-4 is-offset-4">
+          <article class="notification is-warning">
+            <h3 class="title is-size-4-touch">Portfolio</h3>
+            <p class="subtitle is-size-5-touch">Semantic, Responsive</p>
+            <figure class="image is-4by3">
+              <img src="http://bulma.io/images/placeholders/640x480.png">
+            </figure>
+            <div class="content">
+              <a class="button button--start is-light" title="Your already here!" href="https://github.io/Doanvin/portfolio" target="_blank" disabled>
+                <span class="icon">
+                  <i class="fa fa-link"></i>
+                </span>
+                <span class="is-size-7-touch">Live</span>
+              </a>
+              <a class="button button--end is-dark" href="https://github.com/Doanvin/portfolio" target="_blank">
+                <span class="icon">
+                  <i class="fa fa-github"></i>
+                </span>
+                <span class="is-size-7-touch">Github</span>
+              </a>
+              <p>This is content text.</p>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="tile is-parent">
-        <article class="tile is-child notification is-danger">
-          <p class="title is-size-4-touch">First Angular App</p>
-          <p class="subtitle is-size-5-touch">Angular</p>
-          <figure class="image is-4by3">
-            <img src="http://bulma.io/images/placeholders/640x480.png">
-          </figure>
-          <div class="content">
-            This is the content.
+    </div>
+
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="title is-size-2 has-text-centered">Contact</h2>
+      <p class="subtitle has-text-centered">
+        Use the form below to get in contact with me.
+      </p>
+      <div class="columns">
+      <form class="column is-8 is-offset-2" method="POST" action="https://formspree.io/donavinhannon@gmail.com">
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+            <input class="input" type="text" name="name" placeholder="Your name">
           </div>
-        </article>
+        </div>
+
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input is-danger" type="email" name="_replyto" placeholder="Your email" value="">
+            <span class="icon is-small is-left">
+              <i class="fa fa-envelope"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fa fa-warning"></i>
+            </span>
+          </div>
+          <p class="help is-danger">This email is invalid</p>
+        </div>
+
+        <div class="field">
+          <label class="label">Subject</label>
+          <div class="control">
+            <input class="input" type="text" name="subject" placeholder="Subject">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Message</label>
+          <div class="control">
+            <textarea class="textarea" name="message" placeholder="Your message"></textarea>
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-primary" type="submit" value="Send">Submit</button>
+          </div>
+          <div class="control">
+            <button class="button is-link">Cancel</button>
+          </div>
+        </div>
+      </form>
       </div>
     </div>
   </section>
@@ -136,14 +280,14 @@
   <script>
   document.addEventListener('DOMContentLoaded', function () {
 
-// Get all "navbar-burger" elements
-var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  // Get all "navbar-burger" elements
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-// Check if there are any navbar burgers
-if ($navbarBurgers.length > 0) {
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
 
-  // Add a click event on each of them
-  $navbarBurgers.forEach(function ($el) {
+    // Add a click event on each of them
+    $navbarBurgers.forEach(function ($el) {
     $el.addEventListener('click', function () {
 
       // Get the target from the "data-target" attribute
