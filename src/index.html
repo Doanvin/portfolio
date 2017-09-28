@@ -299,7 +299,10 @@
 
 
   function validateForm() {
+    // Select the email from contact form
     var email = document.forms['contact']['_replyto'].value;
+
+    // Check if email is valid using regex, return false if not valid
     if (/(\w|\.|-)+@(\w|-){2,22}\.((\w{2,5}\.\w{2,5})|(\w{2,12}))/.test(email) != true) {
         alert('The email address entered is not valid.  Please enter a valid email address.');
         return false;
