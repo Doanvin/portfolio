@@ -11,13 +11,13 @@
 </head>
 
 <body>
-  <section class="hero hero-bg is-primary is-fullheight">
+  <section class="hero is-primary hero-bg is-fullheight">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
       <nav class="navbar is-light" role="navigation" aria-label="main navigation">
         <div class="container">
         <div class="navbar-brand">
-          <a class="navbar-item" href="http://bulma.io">
+          <a class="navbar-item" href="#">
             <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
           </a>
 
@@ -62,9 +62,10 @@
     <!-- Hero content: will be in the middle -->
     <div class="hero-body">
       <div class="container has-text-centered">
-        <picture alt="Developer in front of comuter">
-          <source media="(min-width: 500px)" srcset="./img/dev-icon-inverted-275x275.png"/>
-          <img src="./img/dev-icon-inverted-175x175.png" />
+        <picture alt="Developer in front of computer">
+          <source media="(min-width: 500px)" srcset="./img/dev-icon-inverted-275x275.png">
+          <source media="(max-width: 499px)" srcset="./img/dev-icon-inverted-175x175.png">
+          <img src="./img/dev-icon-inverted-175x175.png">
         </picture>
 
         <h1 class="title is-size-3-mobile is-size-2-tablet is-size-1-desktop">
@@ -109,9 +110,9 @@
           <article class="notification is-primary">
             <h3 class="title is-size-4-touch">Calaska Culture</h3>
             <p class="subtitle is-size-5-touch">Semantic, Responsive</p>
-            <figure class="image is-4by3">
+            <picture class="image is-4by3">
               <img src="http://bulma.io/images/placeholders/640x480.png">
-            </figure>
+            </picture>
             <div class="content">
               <a class="button button--start is-light" href="https://www.calaska.org/?utm_source=portfolio&utm_medium=button" target="_blank">
                 <span class="icon">
@@ -211,7 +212,7 @@
     </div>
   </section>
 
-  <section class="section" id="contact">
+  <section class="section bg-info" id="contact">
     <div class="container">
       <h2 class="title is-size-2 has-text-centered">Contact</h2>
       <p class="subtitle has-text-centered">
@@ -275,6 +276,11 @@
     </div>
   </footer>
 
+  <script src="./js/smoothscroll.min.js"></script>
+  <!-- Initialize smoothscroll -->
+  <script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
   <script>
   document.addEventListener('DOMContentLoaded', function () {
 

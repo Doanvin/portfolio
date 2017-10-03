@@ -4,19 +4,16 @@
 
 
 // 2. Set your own initial variables
-
-// Update blue
-// $blue: #46aef7;
-// $blue-invert: #fff;
-// Add pink and its invert
-// $pink: #ffb3b3;
-// $pink-invert: #fff;
+$blue: #46aef7;
+$orange: #ffaa3c;
+$green: #3bf8a2;
+$red: #ff4a3c;
 
 
 // 3. Set the derived variables
-// Use the new pink as the primary color
-// $primary: $orange;
-// $primary-invert: $pink-invert;
+$primary: $blue;
+$info: $green;
+$warning: $orange;
 
 // 4. Import the rest of Bulma
 @import "bulma";
