@@ -6,7 +6,7 @@
 
 // ELEMENTS
 // @import "./../../node_modules/bulma/sass/elements/all";
-// @import "./../../node_modules/bulma/sass/elements/box";
+@import "./../../node_modules/bulma/sass/elements/box";
 @import "./../../node_modules/bulma/sass/elements/button";
 @import "./../../node_modules/bulma/sass/elements/container";
 @import "./../../node_modules/bulma/sass/elements/content";
@@ -37,8 +37,8 @@
 // @import "./../../node_modules/bulma/sass/components/tabs";
 
 // GRID
-// @import "./../../node_modules/bulma/sass/grid/all";
-@import "./../../node_modules/bulma/sass/grid/columns";
+@import "./../../node_modules/bulma/sass/grid/all";
+// @import "./../../node_modules/bulma/sass/grid/columns";
 // @import "./../../node_modules/bulma/sass/grid/tiles";
 // LAYOUT
 @import "./../../node_modules/bulma/sass/layout/all";

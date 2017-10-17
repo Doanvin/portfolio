@@ -1,4 +1,4 @@
-.hero-bg {
+  .hero-bg {
   // background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
   background-image: radial-gradient(circle 400px at center, #16d9e3 10%, #30c7ec 47%, #46aef7 100%);
 }
@@ -17,4 +17,12 @@
 
 bg-info {
   background-color: $info;
+}
+
+.is-blinking {
+  animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
 }
