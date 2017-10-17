@@ -1,4 +1,20 @@
-  .hero-bg {
+.bg-danger {
+  background-color: lighten($danger, 10);
+}
+
+.bg-info {
+  background-color: lighten($info, 20);
+}
+
+.bg-primary {
+  background-color: lighten($primary, 15);
+}
+
+.bg-warning {
+  background-color: lighten($warning, 5);
+}
+
+.hero-bg {
   // background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
   background-image: radial-gradient(circle 400px at center, #16d9e3 10%, #30c7ec 47%, #46aef7 100%);
 }
@@ -15,10 +31,7 @@
   }
 }
 
-bg-info {
-  background-color: $info;
-}
-
+// down arrow animation
 .is-blinking {
   animation: blinker 1.5s linear infinite;
 }
@@ -26,3 +39,4 @@ bg-info {
 @keyframes blinker {
   50% { opacity: 0; }
 }
+// down arrow animation end

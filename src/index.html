@@ -18,7 +18,12 @@
         <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="#">
-            <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+            <picture>
+              <source media="(max-width: 359px)" srcset="./img/dev-icon.svg" type="image/svg+xml"/>
+              <source media="(min-width: 360px)" srcset="./img/dev-icon.svg" type="image/svg+xml"/>
+              <img srcset="./img/dev-icon.svg" alt="Donavin Hannon web developer" width="55" height="30">
+            </picture>
+            Donavin Hannon
           </a>
 
           <button class="button navbar-burger" data-target="navMenu">
@@ -87,7 +92,7 @@
     </div>
   </section>
 
-  <section class="section" id="about">
+  <section class="section bg-warning" id="about">
     <div class="container">
       <h2 class="title is-size-2 has-text-centered">About</h2>
 
@@ -96,8 +101,8 @@
         <div class="tile is-vertical is-4">
           <div class="tile">
             <div class="tile is-parent">
-              <article class="tile is-child box is-info">
-                <p class="title">1</p>
+              <article class="tile is-child box is-primary">
+                <p class="title">1 <i class="fa fa-user-o fa-1" aria-hidden="true"></i></p>
                 <p class="subtitle">Curiosity and an interest in technology drew me into the world of programming and development. I am a self taught developer with a passion for technology.</p>
               </article>
             </div>
@@ -106,8 +111,8 @@
 
         <div class="tile is-8">
           <div class="tile is-parent">
-            <article class="tile is-child box is-primary">
-              <p class="title">2</p>
+            <article class="tile is-child box is-info">
+              <p class="title">2 <i class="fa fa-university" aria-hidden="true"></i></p>
               <p class="subtitle">In high school I ran multiple affiliate marketing websites, one of which made anywhere from $2-$3k per month.  This is when I learned HTML, CSS, and a little bit of JavaScript and PHP.  Ultimately, I decided to pursue a degree in health care, but I always had the tech field as my fall-back plan.  In 2015, I graduated from the University of Nevada, Reno with a Bachelors of Science in Community Health Sciences.</p>
             </article>
           </div>
@@ -117,8 +122,8 @@
       <div class="tile is-ancestor">
         <div class="tile is-8">
           <div class="tile is-parent">
-            <article class="tile is-child box is-danger">
-              <p class="title">3</p>
+            <article class="tile is-child box is-primary">
+              <p class="title">3 <i class="fa fa-heartbeat" aria-hidden="true"></i></p>
               <p class="subtitle">At the end of my junior year I realized that the health field wasn’t where I wanted to end up, but instead of switching majors I decided to finish my degree and explore career options later.  Since I had a health sciences degree, I thought about a career as an epidemiologist so I began to learn about data analysis using python (pandas). After some some data analysis and web scraping projects, I made the choice to move away from health and commit all my time to web development.</p>
               <div class="content">
                 <!-- Content -->
@@ -128,8 +133,8 @@
         </div>
         <div class="tile is-4">
           <div class="tile is-parent">
-            <article class="tile is-child box is-warning">
-              <p class="title">4</p>
+            <article class="tile is-child box is-info">
+              <p class="title">4 <i class="fa fa-laptop" aria-hidden="true"></i></p>
               <p class="subtitle">I took two web development classes in high school and enjoyed the experience.  These fond memories along with an abundance of learning material on the net led me to commit to learning web development. I am currently seeking full-time employment as a web developer.</p>
             </article>
           </div>
@@ -151,7 +156,7 @@
       <!-- Row: 1  Col: 1 -->
       <div class="columns">
         <div class="column is-4">
-          <article class="notification is-primary">
+          <article class="notification is-info">
             <h3 class="title is-size-4-touch">Calaska Culture</h3>
             <p class="subtitle is-size-5-touch">Semantic, Responsive</p>
             <picture class="image is-4by3">
@@ -176,7 +181,7 @@
         </div>
         <!-- Row: 1  Col: 2 -->
         <div class="column is-4">
-          <article class="notification is-info">
+          <article class="bg-primary notification  is-primary">
             <h3 class="title is-size-4-touch">10 Day Weather</h3>
             <p class="subtitle is-size-5-touch">Api's, Bootstrap 3</p>
             <figure class="image is-4by3">
@@ -201,7 +206,7 @@
         </div>
         <!-- Row: 1  Col: 3 -->
         <div class="column is-4">
-          <article class="notification is-danger">
+          <article class="notification is-info">
             <h3 class="title is-size-4-touch">Recipe App</h3>
             <p class="subtitle is-size-5-touch">Angular</p>
             <figure class="image is-4by3">
@@ -227,8 +232,8 @@
       </div>
       <!-- Row: 2  Col: 1 -->
       <div class="columns">
-        <div class="column is-4 is-offset-4">
-          <article class="notification is-warning">
+        <div class="column is-4">
+          <article class="notification bg-primary is-primary">
             <h3 class="title is-size-4-touch">Portfolio</h3>
             <p class="subtitle is-size-5-touch">Semantic, Responsive</p>
             <figure class="image is-4by3">
