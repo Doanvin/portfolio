@@ -31,6 +31,20 @@
   }
 }
 
+.project {
+  padding: 1.25rem 1.5rem;
+}
+
+.project-text {
+  margin-top: 1.2rem;
+}
+
+.img-hover {
+  &:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+}
+
 // down arrow animation
 .is-blinking {
   animation: blinker 1.5s linear infinite;
