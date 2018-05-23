@@ -37,6 +37,6 @@
     "sass-lint": "^1.10.2"
   },
   "dependencies": {
-    "bulma": "^0.5.3"
+    "bulma": "0.5.3"
   }
 }

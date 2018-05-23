@@ -20,6 +20,10 @@
 }
 
 .button {
+  &-wrap {
+    padding-top: .5rem;
+  }
+
   &--end {
     margin: .5rem;
   }
@@ -32,11 +36,12 @@
 }
 
 .project {
+  height: 100%;
   padding: 1.25rem 1.5rem;
-}
 
-.project-text {
-  margin-top: 1.2rem;
+  &-text {
+    margin-top: .5rem;
+  }
 }
 
 .img-shadow {
@@ -47,7 +52,7 @@
 
 .button-shadow {
   &:hover {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
   }
 }
 
