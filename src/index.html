@@ -19,11 +19,7 @@
         <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="#">
-            <picture>
-              <source media="(max-width: 359px)" srcset="./img/dev-icon.svg" type="image/svg+xml"/>
-              <source media="(min-width: 360px)" srcset="./img/dev-icon.svg" type="image/svg+xml"/>
-              <img srcset="./img/dev-icon.svg" alt="Donavin Hannon web developer" width="55" height="30">
-            </picture>
+            <img srcset="./img/dev-icon.svg" alt="Donavin Hannon web developer" width="55" height="30">
             Donavin Hannon
           </a>
 
@@ -165,7 +161,7 @@
             <p class="subtitle is-size-5-touch">Responsive, Custom Wordpress</p>
             <a title="You're already here!" href="https://sfthcc.org" target="_blank">
               <picture class="image is-4by3 box img-shadow">
-                <img src="./img/project-port.png">
+                <img class="lozad" data-src="./img/project-sfthcc.png" src="./img/project-sfthcc-60x60.png">
               </picture>
             </a>
             <div class="content">
@@ -194,7 +190,7 @@
             <p class="subtitle is-size-5-touch">Semantic, Responsive</p>
             <a href="https://www.calaska.org/?utm_source=portfolio&utm_medium=img" target="_blank">
               <picture class="image is-4by3 box img-shadow">
-                <img src="./img/project-cc.png">
+                <img class="lozad" data-src="./img/project-cc.png" src="./img/project-cc-60x60.png">
               </picture>
             </a>
             <div class="content">
@@ -223,7 +219,7 @@
             <p class="subtitle is-size-5-touch">Api's, Bootstrap</p>
             <a href="https://doanvin.github.io/weather-by-burr" target="_blank">
             <picture class="image is-4by3 box img-shadow">
-              <img src="./img/project-10dw.png">
+              <img class="lozad" data-src="./img/project-10dw.png" src="./img/project-10dw-60x60.png">
             </picture>
             </a>
             <div class="content">
@@ -253,14 +249,14 @@
           <article class="project notification is-info">
             <h3 class="title is-size-4-touch">Angular Todo</h3>
             <p class="subtitle is-size-5-touch">Angular 5</p>
-            <a href="https://doanvin.github.io/angular-todo" target="_blank">
+            <a href="https://doanvin.github.io/angular-todo/" target="_blank">
               <picture class="image is-4by3 box img-shadow">
-                <img src="//bulma.io/images/placeholders/640x480.png">
+                <img class="lozad" data-src="./img/project-at.png" src="./img/project-at-60x60.png">
               </picture>
             </a>
             <div class="content">
               <div class="button-wrap">
-                  <a class="button button--start is-light button-shadow" href="https://doanvin.github.io/angular-todo" target="_blank">
+                  <a class="button button--start is-light button-shadow" href="https://doanvin.github.io/angular-todo/" target="_blank">
                     <span class="icon">
                       <i class="fa fa-link"></i>
                     </span>
@@ -284,12 +280,12 @@
             <p class="subtitle is-size-5-touch">Semantic, Responsive</p>
             <a title="You're already here!" disabled>
               <picture class="image is-4by3 box img-shadow">
-                <img src="./img/project-port.png">
+                <img class="lozad" data-src="./img/project-port.png" src="./img/project-port-60x60.png">
               </picture>
             </a>
             <div class="content">
               <div class="button-wrap">
-                <a class="button button--start is-light button-shadow" title="You're already here!" href="https://doanvin.github.io/portfolio" target="_blank" disabled>
+                <a class="button button--start is-light button-shadow" title="You're already here!" target="_blank" disabled>
                   <span class="icon">
                     <i class="fa fa-link"></i>
                   </span>
@@ -376,12 +372,19 @@
       </div>
     </div>
   </footer>
-
+  <!-- Smoothscroll link -->
   <script src="./js/smoothscroll.min.js"></script>
-  <!-- Initialize smoothscroll -->
+  <script src="./js/lozad.min.js"></script>
+
+  <!-- Initialize smoothscroll & lazyload-->
   <script>
-	var scroll = new SmoothScroll('a[href*="#"]');
-</script>
+  var scroll = new SmoothScroll('a[href*="#"]');
+  var el = document.querySelectorAll('picture img.lozad');
+  var observer = lozad(el); // lazy loads elements with default selector as '.lozad'
+  observer.observe();
+  </script>
+
+  <!-- Navbar JS -->
   <script>
   document.addEventListener('DOMContentLoaded', function () {
 
@@ -410,6 +413,7 @@
   });
 
 
+  // Email Validation
   function validateForm() {
     // Select the email from contact form
     var email = document.forms['contact']['_replyto'].value;

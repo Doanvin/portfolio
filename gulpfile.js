@@ -16,7 +16,8 @@ var sourcemaps    = require('gulp-sourcemaps');
 var babel         = require('gulp-babel');
 
 
-gulp.task('js-minify', function () {
+// JS Task
+gulp.task('js', function () {
     return gulp.src('src/js/*.js')
         .pipe(plumber())
         .pipe(babel())
@@ -27,8 +28,6 @@ gulp.task('js-minify', function () {
         .pipe(gulp.dest('dist/js'))
         .pipe(reload({stream:true}));
 });
-
-// gulp.task('js', ['js-minify']);
 
 // Css Task
 gulp.task('css', function () {
@@ -92,12 +91,12 @@ gulp.task('live',  ['browser-sync'], function() {
     // Watch scss, js, img, html files
     gulp.watch('src/scss/**/*.scss', ['sass']);
     gulp.watch('src/css/**/*.css', ['css']);
-    gulp.watch('src/js/**/app.js', ['js-minify']);
+    gulp.watch('src/js/**/*.js', ['js']);
     gulp.watch('src/img/**/*', ['img']);
     gulp.watch('src/**/*.html', ['html']);
 });
 
 // Default Task
 gulp.task('default', function() {
-    gulp.start('sass', 'css', 'js-minify', 'img', 'html', 'move-fonts');
+    gulp.start('sass', 'css', 'js', 'img', 'html', 'move-fonts');
 });
